@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let express = require('express');
 let path = require('path');
 let favicon = require('serve-favicon');
@@ -12,6 +13,20 @@ let publishers = require('./routes/publishers');
 let genres = require('./routes/genres');
 
 let app = express();
+=======
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+
+require('./lib/connection');
+var employees = require('./routes/books');
+var teams = require('./routes/authors');
+
+var app = express();
+>>>>>>> origin/master
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
