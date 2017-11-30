@@ -8,6 +8,8 @@ let bodyParser = require('body-parser');
 require('./lib/connection');
 let employees = require('./routes/books');
 let teams = require('./routes/authors');
+let books = require('./routes/books');
+let authors = require('./routes/authors');
 let publishers = require('./routes/publishers');
 let genres = require('./routes/genres');
 
@@ -37,6 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(employees);
 app.use(teams);
+app.use(books);
+app.use(authors);
+app.use(publishers);
+app.use(genres);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
