@@ -15,7 +15,6 @@ router.get('/authors', function (req, res, next) {
 
 router.get('/authors/:authorId', function (req, res, next) {
   Author.findOne({
-  Team.findOne({
     _id: req.params.authorId
   }, function (error, results) {
     if (error) {
