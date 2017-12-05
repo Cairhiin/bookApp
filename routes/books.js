@@ -7,7 +7,11 @@ let Publisher = mongoose.model('Publisher');
 let router = express.Router();
 
 router.get('/books', function (req, res, next) {
-  Book.find().sort('title.main').exec(function (error, results) {
+  Book.find().sort('title.main')
+  .populate('authors')
+  .populate('genre')
+  .populate('publisher')
+  .exec(function (error, results) {
     if (error) {
       return next(error);
     }
@@ -18,11 +22,11 @@ router.get('/books', function (req, res, next) {
 
 router.get('/books/:bookId', function (req, res, next) {
   Book.findOne({
-    id: req.params.bookId
+    _id: req.params.bookId
   })
-  .populate('Author')
-  .populate('Genre')
-  .populate('Publisher')
+  .populate('authors')
+  .populate('genre')
+  .populate('publisher')
   .exec(function (error, results) {
     if (error) {
       return next(error);

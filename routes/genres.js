@@ -4,7 +4,7 @@ var Genre = mongoose.model('Genre');
 var router = express.Router();
 
 router.get('/genres', function (req, res, next) {
-  Genre.find().sort('name.last').exec(function (error, results) {
+  Genre.find().sort('name').populate('books').exec(function (error, results) {
     if (error) {
       return next(error);
     }
