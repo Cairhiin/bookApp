@@ -4,7 +4,7 @@ var Author = mongoose.model('Author');
 var router = express.Router();
 
 router.get('/authors', function (req, res, next) {
-  Author.find().sort('name.last').exec(function (error, results) {
+  Author.find().sort('name.last').populate('books').exec(function (error, results) {
     if (error) {
       return next(error);
     }
@@ -15,11 +15,15 @@ router.get('/authors', function (req, res, next) {
 
 router.get('/authors/:authorId', function (req, res, next) {
   Author.findOne({
-  Team.findOne({
     _id: req.params.authorId
-  }, function (error, results) {
+  })
+  .populate('books').exec(function (error, results) {
     if (error) {
       return next(error);
+    }
+
+    if (!results) {
+      res.send(404);
     }
 
     res.json(results);
