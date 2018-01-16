@@ -1,6 +1,4 @@
 let mongoose = require('mongoose');
-// let postFind = require('mongoose-post-find');
-// let async = require('async');
 let Schema = mongoose.Schema;
 let AuthorSchema = new Schema({
   _id: Schema.Types.ObjectId,
