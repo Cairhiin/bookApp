@@ -1,0 +1,15 @@
+<div layout="row" class="book-list" layout-align="start end" layout-wrap layout-padding="10">
+  <li ng-repeat="book in booksCtrl.books" flex="20">
+    <div>
+      <img ng-src="{{ book.image }}" class="image-responsive">
+    </div>
+    <div class="book-details">
+      <h4>
+        <a href="#/books/{{ book._id }}">{{ book.title.main }}</a>
+      </h4>
+      <span class="book-info">
+        <p ng-repeat="author in book.authors">{{ author.name.first }} {{ author.name.last }}</p>
+      </span>
+    </div>
+  </li>
+</div>
