@@ -17,5 +17,26 @@
   "bugs": {
     "url": "https://github.com/Cairhiin/bookApp/issues"
   },
-  "homepage": "https://github.com/Cairhiin/bookApp#readme"
+  "homepage": "https://github.com/Cairhiin/bookApp#readme",
+  "bin": {
+    "book-application": "populate_db.js"
+  },
+  "dependencies": {
+    "angular": "^1.6.7",
+    "cookie-parser": "^1.4.3",
+    "body-parser": "^1.18.2",
+    "mongodb": "^2.2.33",
+    "express": "^4.16.2",
+    "debug": "^3.1.0",
+    "express-generator": "^4.15.5",
+    "morgan": "^1.9.0",
+    "mongoose": "^4.13.5",
+    "serve-favicon": "^2.4.5",
+    "serv": "^0.2.4"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }

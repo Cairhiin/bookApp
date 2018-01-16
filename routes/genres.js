@@ -16,9 +16,14 @@ router.get('/genres', function (req, res, next) {
 router.get('/genres/:genreId', function (req, res, next) {
   Genre.findOne({
     _id: req.params.genreId
-  }, function (error, results) {
+  })
+  .populate('books').exec(function (error, results) {
     if (error) {
       return next(error);
+    }
+
+    if (!results) {
+      res.send(404);
     }
 
     res.json(results);

@@ -1,0 +1,41 @@
+.book-cover {
+
+}
+
+.book-list {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.book-details {
+  margin-top: 15px;
+}
+
+.book-details .main-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.book-details .sub-title {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Main Navigation */
+.md-toolbar-tools .white {
+  color: white;
+}
+
+.md-toolbar-tools .material-icons {
+  cursor: pointer;
+}
+
+.md-toolbar-tools .mobile-show {
+  display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  .md-toolbar-tools .mobile-hide { display: none; }
+  .md-toolbar-tools .mobile-show { display: block; }
+}

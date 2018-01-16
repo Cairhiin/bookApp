@@ -1,0 +1,58 @@
+  <div layout="column" layout-fill>
+
+    <md-sidenav md-component-id='left' class='fixed-nav md-sidenav-left md-whiteframe-z2'>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <i class="material-icons" ng-click='ToolbarCtrl.toggleSideNav()'>menu</i>
+        </div>
+        <div class="md-toolbar-tools">
+          <a href="#" ng-click='ToolbarCtrl.toggleSideNav()'>Home</a>
+        </div>
+        <div class="md-toolbar-tools">
+          <a href="#/books" ng-click='ToolbarCtrl.toggleSideNav()'>Books</a>
+        </div>
+        <div class="md-toolbar-tools">
+          <a href="#/authors" ng-click='ToolbarCtrl.toggleSideNav()'>Authors</a>
+        </div>
+        <div class="md-toolbar-tools">
+          <a href="#/genres" ng-click='ToolbarCtrl.toggleSideNav()'>Genres</a>
+        </div>
+        <div class="md-toolbar-tools">
+          <a href="#/publishers" ng-click='ToolbarCtrl.toggleSideNav()'>Publishers</a>
+        </div>
+      </md-toolbar>
+    </md-sidenav>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+
+      <!--- menu button only for small devices -->
+      <i class="material-icons" ng-click='ToolbarCtrl.toggleSideNav()'
+        ng-hide="ToolbarCtrl.$mdMedia('gt-md')">menu</i>
+
+      <h2 md-truncate flex>&nbsp;BookApp with MEAN</h2>
+
+      <md-button href="#" class="mobile-hide">
+        Home
+      </md-button>
+      <md-button href="#/books" class="mobile-hide">
+        Books
+      </md-button>
+      <md-button href="#/authors" class="mobile-hide">
+        Authors
+      </md-button>
+      <md-button href="#/genres" class="mobile-hide">
+        Genres
+      </md-button>
+      <md-button href="#/publishers" class="mobile-hide">
+        Publishers
+      </md-button>
+    </div>
+
+  </md-toolbar>
+  <md-content>
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </md-content>
+</div>

@@ -26,6 +26,10 @@ var BookSchema = new Schema({
   price: {
     type: Number,
     required: true,
+  },
+  image: {
+    type: String,
+    default: 'images/book-cover.png',
   }
 });
 

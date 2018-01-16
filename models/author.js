@@ -19,35 +19,4 @@ let AuthorSchema = new Schema({
   },
 });
 
-// let _assignBooksToAuthor = function _assignBooksToAuthor (Book, result, callback) {
-//   Book.find({
-//     Author: result._id
-//   }, function (error, books) {
-//     if (error) {
-//       return callback(error);
-//     }
-//     result.books = books;
-//     callback(null, result);
-//   });
-// }
-//
-// AuthorSchema.plugin(postFind, {
-//   find: function (result, callback) {
-//     let Book = mongoose.model('Book');
-//     async.each(result, function (item, callback) {
-//       _assignBooksToAuthor(Book, item, callback);
-//     }, function (error) {
-//       if (error) {
-//         return callback(error);
-//       }
-//
-//       callback(null, result);
-//     });
-//   },
-//   findOne: function (result, callback) {
-//     let Book = mongoose.model('Book');
-//     _assignBooksToAuthor(Book, result, callback);
-//   }
-// });
-
 module.exports = mongoose.model('Author', AuthorSchema);

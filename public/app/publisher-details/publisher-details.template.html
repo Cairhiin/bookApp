@@ -1,0 +1,13 @@
+<div class="col-xs-12">
+  <div class="panel panel-default actor">
+    <div class="panel-body">
+      <span class="icon-bar"><i class="fa fa-2x fa-user"></i></span>
+      <span class="actor-header">
+        {{ publisherDetailsCtrl.publisher.name }}
+      </span>
+      <ul ng-repeat="book in publisherDetailsCtrl.publisher.books">
+        <li>{{ book.title.main }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
