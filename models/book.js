@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var BookSchema = new Schema({
-  _id: Schema.Types.ObjectId,
+  _id: { type: Schema.Types.ObjectId, auto: true },
   title: {
     main: {
       type: String,

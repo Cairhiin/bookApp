@@ -3,9 +3,9 @@
     <div class="panel-body">
       <span class="icon-bar"><i class="fa fa-2x fa-user"></i></span>
       <span class="actor-header">
-        {{ genre.name }}
+        {{ genreDetailsCtrl.genre.name }}
       </span>
-      <ul ng-repeat="book in genre.books">
+      <ul ng-repeat="book in genreDetailsCtrl.genre.books">
         <li>{{ book.title.main }}</li>
       </ul>
     </div>

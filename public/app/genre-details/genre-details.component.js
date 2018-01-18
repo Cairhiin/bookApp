@@ -3,13 +3,13 @@ angular.
   component('genreDetails', {
     templateUrl: 'app/genre-details/genre-details.template.html',
     controllerAs: 'genreDetailsCtrl',
-    controller: ['$routeParams',
-      function genreDetailsCtrl($routeParams) {
+    controller: ['GenreService', '$routeParams',
+      function genreDetailsCtrl(service, $routeParams) {
         let self = this;
         service.get({
           genreId: $routeParams.genreId
-        }).then(function(response) {
-          self.genre = response;
+        }, function(data, headers) {
+          self.genre = data;
         }, _handleError);
       }
     ]

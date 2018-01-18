@@ -10,7 +10,6 @@ angular.
           publisherId: $routeParams.publisherId
         }, function(data, headers) {
           self.publisher = data;
-          console.log(self.publisher);
         }, _handleError);
       }
     ]
