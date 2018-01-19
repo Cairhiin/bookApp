@@ -10,6 +10,7 @@ angular.
           bookId: $routeParams.bookId
         }, function(data, headers) {
           self.book = data;
+          modifySubTitle(self.book);
         }, _handleError);
       }
     ]

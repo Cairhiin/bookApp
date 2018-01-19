@@ -1,5 +1,51 @@
-.book-cover {
+body, md-content, .jumbotron {
+  background-color: #1e1a19;
+  color: #b16a49;
+}
 
+
+/* Bootstrap Panel layout */
+.panel {
+  background-color: #323232;
+  border: 1px solid #222;
+  color: #af8d54;
+}
+
+.panel .panel-heading {
+  font-weight: bold;
+  background-color: #b16a49;
+  border-bottom: 1px solid #b16a49;
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.panel .panel-body {
+  padding: 0;
+}
+
+.panel .panel-body.book-description {
+  padding: 5px 10px 5px 10px;
+}
+
+.panel ul {
+  list-style: none;
+  padding: 8px;
+  margin: 0;
+}
+
+.panel ul:nth-child(even) {
+  background-color: #222;
+}
+
+.panel a, .panel a:hover, .panel a:visited, .panel a:active {
+  color: #af8d54;
+  text-decoration: none;
+}
+
+/* Utility classes */
+.front-page {
+  height: 200px;
 }
 
 .book-list {
@@ -8,21 +54,34 @@
   padding: 0;
 }
 
-.book-details {
-  margin-top: 15px;
+.small-text {
+  font-size: 0.9em;
+  color: #666;
+  text-transform: none;
 }
 
-.book-details .main-title {
-  font-size: 1.2em;
+.white {
+  color: white;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Main Navigation Angular Material */
+md-toolbar {
+  margin-bottom: 20px;
+}
+
+.md-toolbar-tools {
+  background-color: #b16a49;
   font-weight: bold;
 }
 
-.book-details .sub-title {
-  font-size: 1em;
-  color: #666;
+.md-toolbar-tools .md-button {
+  font-weight: bold;
 }
 
-/* Main Navigation */
 .md-toolbar-tools .white {
   color: white;
 }

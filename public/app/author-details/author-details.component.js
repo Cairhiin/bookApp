@@ -10,6 +10,8 @@ angular.
           authorId: $routeParams.authorId
         }, function(data, headers) {
           self.author = data;
+          // modify the subtitle (if it exists) so it shows in brackets
+          modifySubTitle(self.author.books);
         }, _handleError);
       }
     ]

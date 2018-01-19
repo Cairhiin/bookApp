@@ -32,3 +32,13 @@ app.config(['$locationProvider', '$routeProvider', function($locationProvider, $
 let _handleError = function _handleError(err) {
   console.log(err);
 }
+
+let modifySubTitle = function modifySubTitle(data) {
+  if (data.length > 1) {
+    data.forEach(function(element) {
+      ((element.title.sub) && (element.title.sub = "(" + element.title.sub + ")"));
+    });
+  } else {
+    ((data.title.sub) && (data.title.sub = "(" + data.title.sub + ")"));
+  }
+}

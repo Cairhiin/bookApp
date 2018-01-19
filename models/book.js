@@ -27,6 +27,10 @@ var BookSchema = new Schema({
     type: Number,
     required: true,
   },
+  year: {
+    type: Number,
+    required: true,
+  },
   image: {
     type: String,
     default: 'images/book-cover.png',
