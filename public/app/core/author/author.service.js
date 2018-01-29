@@ -5,6 +5,9 @@ angular.
         query: {
           method: 'GET',
           isArray: true
+        },
+        save: {
+          method: 'PUT'
         }
       });
   }]);

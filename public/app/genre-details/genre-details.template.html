@@ -7,7 +7,7 @@
       <ul ng-repeat="book in genreDetailsCtrl.genre.books | orderBy : 'year'">
         <a href="#/books/{{ book._id }}">
           <li>
-            {{ book.year }}&nbsp;&nbsp;{{ book.title.main }} <span class="small-text">{{ book.title.sub }}</span>
+            {{ book.year }}&nbsp;&nbsp;{{ book.title.main }} <span class="small-text">( {{ book.title.sub }} )</span>
             <span class="float-right">{{ book.price | currency:'€' }}</span>
           </li>
         </a>

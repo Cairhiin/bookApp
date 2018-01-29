@@ -30,4 +30,11 @@ router.get('/authors/:authorId', function (req, res, next) {
   });
 });
 
+router.put('/authors', function (req, res) {
+  Author.create(req.body, function(err, author, numberAffected) {
+    if (err) console.log(err);
+    res.end();
+  })
+})
+
 module.exports = router;
