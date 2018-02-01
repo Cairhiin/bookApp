@@ -43,7 +43,7 @@ angular.
           ctrl.$storage.hasVoted = true;
         }
 
-        function calculateWidth(value) {
+        let calculateWidth = function calculateWidth(value) {
             const starPercentage = (value / ratingMax) * 100;
             return `${(Math.round(starPercentage / 10) * 10)}%`;
         }
