@@ -3,6 +3,7 @@ angular.
   component('bookDetails', {
     templateUrl: 'app/book-details/book-details.template.html',
     controllerAs: 'bookDetailsCtrl',
+    bindToController: true,
     controller: ['BookService', '$routeParams',
       function bookDetailsCtrl(service, $routeParams) {
         let self = this;

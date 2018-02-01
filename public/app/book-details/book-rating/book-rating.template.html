@@ -1,0 +1,8 @@
+<div class="book-rating">
+  <div ng-init="bookRatingCtrl.init()" class="stars-outer" ng-click="bookRatingCtrl.selectRating($event)">
+    <i class="fa fa-star-o"></i>  <i class="fa fa-star-o"></i>  <i class="fa fa-star-o"></i>  <i class="fa fa-star-o"></i>  <i class="fa fa-star-o"></i>
+    <div ng-if="bookRatingCtrl.hasVoted" class="stars-inner" ng-style="{ width: bookRatingCtrl.rating }">
+
+    </div>
+  </div>
+</div>

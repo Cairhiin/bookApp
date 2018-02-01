@@ -29,6 +29,7 @@ app.use('/angular-messages', express.static(__dirname + '/node_modules/angular-m
 app.use('/angular', express.static(__dirname + '/node_modules/angular/'));
 app.use('/angular-route', express.static(__dirname + '/node_modules/angular-route/'));
 app.use('/angular-resource', express.static(__dirname + '/node_modules/angular-resource/'));
+app.use('/ngstorage', express.static(__dirname + '/node_modules/ngstorage/'));
 
 app.use(books);
 app.use(authors);

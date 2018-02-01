@@ -1,4 +1,5 @@
 angular.module('bookDetails', [
   'ngRoute',
-  'core.book'
+  'core.book',
+  'bookDetails.bookRating'
 ]);

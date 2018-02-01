@@ -68,6 +68,34 @@ body, md-content, .jumbotron {
   float: right;
 }
 
+/* Rating */
+.book-rating {
+  padding: 5px 10px 5px 10px;
+}
+
+.book-rating .stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+  font-size: 1.2em;
+}
+
+.book-rating .stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.book-rating .stars-inner::before {
+  content: "\f005  \f005  \f005  \f005  \f005";
+  color: #f8ce0b;
+  z-index: 100;
+}
+
+
 /* Main Navigation Angular Material */
 md-toolbar {
   margin-bottom: 20px;

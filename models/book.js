@@ -34,6 +34,10 @@ var BookSchema = new Schema({
   image: {
     type: String,
     default: 'images/book-cover.png',
+  },
+  rating: {
+    type: Number,
+    default: 0,
   }
 });
 
